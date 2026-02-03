@@ -10,6 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv() # Load variables from .env
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -77,11 +82,6 @@ WSGI_APPLICATION = 'playto_backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
-import os
-from dotenv import load_dotenv
-
-load_dotenv() # Load variables from .env
 
 DATABASES = {
     'default': {
