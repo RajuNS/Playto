@@ -18,3 +18,14 @@ for username in users:
         u.set_password('password')
         u.save()
         print(f"Updated user: {username}")
+# Create Superuser for Admin access
+if not User.objects.filter(username='admin').exists():
+    User.objects.create_superuser(username='admin', email='admin@example.com', password='Raju@143')
+    print("Created superuser: admin")
+else:
+    u = User.objects.get(username='admin')
+    u.set_password('Raju@143')
+    u.is_staff = True
+    u.is_superuser = True
+    u.save()
+    print("Updated superuser: admin")
