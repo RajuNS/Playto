@@ -17,7 +17,7 @@ This project is ready for deployment on various cloud platforms.
 2.  **Settings**:
     - **Runtime**: Python 3
     - **Build Command**: `pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput`
-    - **Start Command**: `gunicorn playto_backend.wsgi`
+    - **Start Command**: `gunicorn playto_backend.wsgi` (IMPORTANT: Do not leave this blank, or it will default to `app:app` and fail!)
 
 3.  **Environment Variables**:
     - Add `PYTHON_VERSION` = `3.10.0`
