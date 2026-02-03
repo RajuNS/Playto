@@ -20,13 +20,10 @@ This project is ready for deployment on various cloud platforms.
     - **Start Command**: `gunicorn playto_backend.wsgi`
 
 3.  **Environment Variables**:
-    - Add `PYTHON_VERSION` = `3.10.0` (optional)
+    - Add `PYTHON_VERSION` = `3.10.0`
     - Add `SECRET_KEY` = (generate one)
-    - Add `DB_NAME`, `DB_USER`, `DB_PASSWORD`, `DB_HOST`, `DB_PORT`.
-    - *Note: Render offers a managed PostgreSQL database. You can create one in Render and link it. If you want MySQL, you need an external provider (like Aiven or PlanetScale, or use Render's PostgreSQL).*
-    - **Important**: If you swap to Render's built-in PostgreSQL, you must:
-        1. Replace `mysqlclient` with `psycopg2-binary` in `requirements.txt`.
-        2. Change `ENGINE` in `settings.py` to `django.db.backends.postgresql`.
+    - Add `DB_ENGINE` = `django.db.backends.postgresql`
+    - Add `DB_NAME`, `DB_USER`, `DB_PASSWORD`, `DB_HOST`, `DB_PORT` (Get these from your Render Database Dashboard)
 
 ### Part 2: Frontend on Vercel
 1.  **Import Project**:
