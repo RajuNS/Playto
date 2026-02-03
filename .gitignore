@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+media/
+staticfiles/
+
+# Editor directories
+.idea/
+.vscode/
+
+# Frontend (if not covered by nested gitignore)
+node_modules/
+dist/
+.DS_Store
